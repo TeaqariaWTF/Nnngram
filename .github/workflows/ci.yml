@@ -3,7 +3,7 @@ name: Build CI
 on:
   push:
     branches:
-      - dev
+      - main
     paths-ignore:
         - '**.md'
         - '**.txt'
