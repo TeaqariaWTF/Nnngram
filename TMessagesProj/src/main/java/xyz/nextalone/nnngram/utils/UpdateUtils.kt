@@ -161,7 +161,7 @@ object UpdateUtils {
 
     @JvmStatic
     fun retrieveUpdateMetadata(callback: (UpdateMetadata?, Boolean) -> Unit) {
-        val (metadataChannelID, metadataChannelName) = previewMetadataChannelID to  previewMetadataChannelName
+/*        val (metadataChannelID, metadataChannelName) = previewMetadataChannelID to  previewMetadataChannelName
         val localVersionCode = BuildConfig.VERSION_CODE
         val accountInstance = AccountInstance.getInstance(UserConfig.selectedAccount)
         TLRPC.TL_messages_getHistory().apply {
@@ -268,14 +268,12 @@ object UpdateUtils {
                     }
                 }
             }
-        }
+        }*/
     }
 
     @JvmStatic
     fun checkUpdate(callback: (TLRPC.TL_help_appUpdate?, Boolean) -> Unit) {
-        callback.invoke(null, false) 
-        return
-        if (!UserConfig.getInstance(UserConfig.selectedAccount).isClientActivated) return
+/*        if (!UserConfig.getInstance(UserConfig.selectedAccount).isClientActivated) return
         val (apksChannelID, apksChannelName) = previewChannelAPKsID to previewChannelAPKsName
         val accountInstance = AccountInstance.getInstance(UserConfig.selectedAccount)
         retrieveUpdateMetadata { metadata, error ->
@@ -361,7 +359,7 @@ object UpdateUtils {
 
                 }
             }
-        }
+        }*/
     }
 
     data class UpdateMetadata(
