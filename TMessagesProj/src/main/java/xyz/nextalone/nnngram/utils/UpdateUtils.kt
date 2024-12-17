@@ -273,7 +273,8 @@ object UpdateUtils {
 
     @JvmStatic
     fun checkUpdate(callback: (TLRPC.TL_help_appUpdate?, Boolean) -> Unit) {
-        callback.invoke(null, false) return
+        callback.invoke(null, false) 
+        return
         if (!UserConfig.getInstance(UserConfig.selectedAccount).isClientActivated) return
         val (apksChannelID, apksChannelName) = previewChannelAPKsID to previewChannelAPKsName
         val accountInstance = AccountInstance.getInstance(UserConfig.selectedAccount)
